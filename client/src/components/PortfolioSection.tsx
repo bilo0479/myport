@@ -209,15 +209,17 @@ export default function PortfolioSection() {
                             exit={{ opacity: 0 }}
                             className="absolute inset-0 bg-black/60 flex items-center justify-center"
                           >
-                            <Button
-                              size="lg"
-                              className="bg-white text-black hover:bg-white/90"
-                              data-testid={`project-view-${project.id}`}
-                            >
-                              <ExternalLink className="w-4 h-4 mr-2" />
-                              View Project
-                            </Button>
-                          </motion.div>
+                           <a href={`/pages/mobileproject/${project.id}`} target="_blank" rel="/pages/mobileproject" onClick={(e) => e.stopPropagation()}>
+                           <Button
+                            size="lg"
+                             className="bg-white text-black hover:bg-white/90"
+                             data-testid={`project-view-${project.id}`}
+                             >
+                               <ExternalLink className="w-4 h-4 mr-2" />
+                                 View Project
+                                  </Button>
+                                  </a>
+                                </motion.div>
                         )}
                       </AnimatePresence>
 

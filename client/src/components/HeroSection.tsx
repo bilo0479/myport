@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown, Sparkles } from 'lucide-react';
-import sarahImage from '@assets/generated_images/Sarah_Chen_professional_headshot_b4c466f4.png';
+import sarahImage from '@assets/generated_images/download.jpg';
+import resume_of_bilal from '@assets/resume/RESUME_OF_BILAL.pdf';
 
 export default function HeroSection() {
   const [isNameComplete, setIsNameComplete] = useState(false);
@@ -10,8 +11,8 @@ export default function HeroSection() {
   const controls = useAnimation();
   const heroRef = useRef<HTMLDivElement>(null);
 
-  const name = "Sarah Chen";
-  const tagline = ["Designing", "Tomorrow's", "Sustainable", "Digital", "Experiences"];
+  const name = "𝐁𝐈𝐋𝐀𝐋 𝐉.";
+  const tagline = ["𝐂𝐫𝐞𝐚𝐭𝐢𝐯𝐞", "𝓐𝓷𝓪𝓵𝓽𝓲𝓬𝓪𝓵", "𝐔𝐬𝐞𝐫-𝐅𝐨𝐜𝐮𝐬𝐞𝐝", "𝐏𝐚𝐬𝐬𝐢𝐨𝐧𝐚𝐭𝐞", "ŞҜƗŁŁ€Đ"];
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -37,8 +38,12 @@ export default function HeroSection() {
   };
 
   const handleDownloadResume = () => {
-    console.log('Downloading resume');
-    // TODO: Implement actual resume download
+    const link = document.createElement('a');
+     link.href = '/attached_assets/resume/RESUME_OF_BILAL.pdf'; 
+    link.download = 'RESUME_OF_BILAL.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const replayNameAnimation = () => {
@@ -117,7 +122,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -128,7 +133,7 @@ export default function HeroSection() {
             {/* Name with Typewriter Effect */}
             <div className="space-y-4">
               <motion.h1 
-                className="text-5xl md:text-7xl font-display font-bold text-foreground cursor-pointer"
+                className="text-4xl md:text-9xl font-display font-bold text-foreground cursor-pointer"
                 onClick={replayNameAnimation}
                 data-testid="hero-name"
               >
@@ -153,7 +158,7 @@ export default function HeroSection() {
 
               {/* Tagline with Staggered Animation */}
               <motion.div 
-                className="text-xl md:text-2xl text-muted-foreground space-y-2"
+                className="text-xl md:text-5xl text-muted-foreground space-y-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.5 }}
@@ -169,8 +174,8 @@ export default function HeroSection() {
                       ease: "easeOut"
                     }}
                     className={`inline-block mr-3 ${
-                      ["Tomorrow's", "Sustainable", "Experiences"].includes(word)
-                        ? "text-primary font-semibold"
+                      ["𝐔𝐬𝐞𝐫-𝐅𝐨𝐜𝐮𝐬𝐞𝐝", "𝑷𝒂𝒔𝒔𝒊𝒐𝒏𝒂𝒕𝒆", "ŞҜƗŁŁ€Đ"].includes(word)
+                        ? "text-primary font-bold"
                         : ""
                     }`}
                     data-testid={`hero-tagline-${index}`}
@@ -245,7 +250,7 @@ export default function HeroSection() {
               }}
               data-testid="hero-profile-image"
             >
-              <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-primary/20">
+              <div className="relative w-95 h-95 rounded-full overflow-hidden shadow-2xl border-4 border-primary/20">
                 <motion.img
                   src={sarahImage}
                   alt="Sarah Chen"
@@ -256,8 +261,8 @@ export default function HeroSection() {
                 
                 {/* Overlay on Hover */}
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
+                  initial={{ opacity: 99 }}
+                  whileHover={{ opacity: 99 }}
                   className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent flex items-end justify-center p-6"
                 >
                   <span className="text-white font-medium bg-black/50 px-3 py-1 rounded-full text-sm">

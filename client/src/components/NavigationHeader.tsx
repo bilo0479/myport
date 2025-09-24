@@ -62,7 +62,7 @@ export default function NavigationHeader({ onSectionChange }: NavigationHeaderPr
             onClick={() => handleMenuClick('home')}
             data-testid="nav-logo"
           >
-            Sarah Chen
+           𝓑𝓘𝓛𝓐𝓛 𝓙.
           </motion.div>
 
           {/* Desktop Navigation */}

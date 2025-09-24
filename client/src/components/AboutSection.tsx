@@ -47,11 +47,11 @@ export default function AboutSection() {
   ];
 
   const skills: Skill[] = [
-    { name: 'Creativity', level: 95, description: 'Innovative problem solving and visual design' },
-    { name: 'Technical', level: 85, description: 'Frontend development and prototyping' },
-    { name: 'Leadership', level: 80, description: 'Team collaboration and project management' },
-    { name: 'Empathy', level: 90, description: 'User research and inclusive design' },
-    { name: 'Innovation', level: 88, description: 'Emerging tech and sustainable practices' }
+    { name: 'Innovative Problem-Solving', level: 95, description: 'I craft creative solutions to complex challenges, ensuring seamless functionality and user satisfaction.' },
+    { name: 'Clean Code Expertise', level: 85, description: 'I write efficient, maintainable code that adheres to best practices, enhancing project reliability.' },
+    { name: 'Modern Design Sensibility', level: 80, description: 'I design visually appealing, intuitive interfaces that elevate user experiences across platforms.' },
+    { name: 'Scalable Performance Focus', level: 90, description: 'I build robust applications optimized for speed, scalability, and long-term performance.' },
+    { name: 'User-Centric Development', level: 88, description: 'I prioritize user needs, delivering tailored solutions that drive engagement and accessibility.' }
   ];
 
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
@@ -72,11 +72,11 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            About Me
+            ABOUT ME
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A passionate designer on a mission to create digital experiences that are not just beautiful, 
-            but also sustainable and accessible to everyone
+            Passionate <span className="underline">𝑾𝑬𝑩 </span> and <span className="underline">𝐌𝐎𝐁𝐈𝐋𝐄 𝐀𝐏𝐏</span> developer creating innovative, user-friendly
+             solutions with clean code, modern design, and scalable performance.
           </p>
         </motion.div>
 

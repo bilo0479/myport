@@ -104,8 +104,8 @@ export default function Footer() {
           transition={{ duration: 2, delay: 3 }}
           className="text-center mt-8"
         >
-          <p className="text-xs text-muted-foreground/50">
-            ↑ ↑ ↓ ↓ ← → ← → B A
+          <p className="text-muted-foreground text-900">
+            🆃🅷🅰🅽🅺 🆈🅾🆄
           </p>
         </motion.div>
       </div>

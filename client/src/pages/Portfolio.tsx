@@ -48,7 +48,7 @@ export default function Portfolio() {
             transition={{ delay: 0.3 }}
             className="text-lg font-display"
           >
-            Loading Sarah's Portfolio...
+           𝕃𝕆𝔸𝔻𝕀ℕ𝔾 𝕋𝕆 𝔹𝕀𝕃𝔸𝕃'𝕊 ℙ𝕆ℝ𝕋𝔽𝕆𝕃𝕀𝕆
           </motion.p>
         </motion.div>
       </div>
